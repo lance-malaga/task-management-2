@@ -1,0 +1,100 @@
+body {
+  background-color: whitesmoke;
+  color: #252927;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* Song UI styles */
+.task_list {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #252927;
+  color: whitesmoke;
+  padding: 2rem 5rem;
+  border-radius: 1rem;
+  min-height: 20rem;
+}
+.task_list h2 {
+  text-align: left;
+}
+.task {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid whitesmoke;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.task input {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.task button,
+.add_task {
+  padding: 0.5rem 1rem;
+  background-color: whitesmoke;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.2rem;
+  transition: 0.5s all ease-in-out;
+}
+.task button:first-of-type:hover {
+  background-color: #dadd39;
+}
+.task button:last-of-type:hover {
+  color: whitesmoke;
+  background-color: #e70226;
+}
+.task__functions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+/* .edit_icon {
+  background-image: url(./icons/edit.png);
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+} */
+.add_task {
+  margin-bottom: 1rem;
+  border: 1px solid #252927;
+}
+.add_task:hover {
+  color: whitesmoke;
+  border-color: #0168dd;
+  background-color: #0168dd;
+}
+
+/* End of song UI styles */
+
+/* Form styles */
+.task_form {
+  margin-bottom: 2rem;
+}
+.task_form input {
+  margin: 1rem;
+  width: 20rem;
+  background-color: transparent;
+  padding: 0.5rem 1rem 0.5rem 0.3rem;
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+}
+.task_form button {
+  padding: 0.5rem 2rem;
+  color: whitesmoke;
+  background-color: #252927;
+  border: none;
+  transition: 0.7s opacity ease-in-out;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+.task_form button:hover {
+  opacity: 0.5;
+}
+/* End of form styles */
