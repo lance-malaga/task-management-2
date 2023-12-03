@@ -10,7 +10,8 @@ export default function TaskForm(props) {
 
   let initialData = {
     title: "",
-    task_done: false
+    task_done: false,
+    createdAt: "",
   };
 
   if (editing !== "new") {
@@ -24,12 +25,16 @@ export default function TaskForm(props) {
   function handleSubmit(e) {
     // wont refresh page
     e.preventDefault();
+    
+    // get current time
+    const currentTime = new Date();
 
     //add task to list
     if (editing === "new") {
       addTask({
         ...task,
         task_done: false,
+        createdAt: currentTime.toLocaleString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }),
         id: nanoid()
       });
     } else {

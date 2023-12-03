@@ -9,7 +9,7 @@ body {
 
 /* Song UI styles */
 .task_list {
-  width: 70%;
+  width: 75%;
   margin: 0 auto;
   background-color: #252927;
   color: whitesmoke;
@@ -20,6 +20,9 @@ body {
 .task_list h2 {
   text-align: left;
 }
+.task_list ul {
+  padding: 0;
+}
 .task {
   list-style: none;
   display: flex;
@@ -28,9 +31,15 @@ body {
   border-bottom: 1px solid whitesmoke;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
+  gap: 30px;
+}
+.task p {
+  text-align: left;
+  margin: 0px;
 }
 .task input {
-  margin: 0 1rem;
+  margin: 0;
+  margin-right: 1rem;
   cursor: pointer;
 }
 .task button,
@@ -54,20 +63,14 @@ body {
   align-items: center;
   gap: 1rem;
 }
-/* .edit_icon {
-  background-image: url(./icons/edit.png);
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-} */
 .add_task {
   margin-bottom: 1rem;
   border: 1px solid #252927;
 }
 .add_task:hover {
   color: whitesmoke;
-  border-color: #0168dd;
-  background-color: #0168dd;
+  border-color: #252927;
+  background-color: #252927;
 }
 
 /* End of song UI styles */

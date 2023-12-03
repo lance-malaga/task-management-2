@@ -3,6 +3,7 @@ import "../styles.css";
 import Task from "./Task";
 import TaskForm from "./TaskForm";
 import { InventoryContext } from "../data/inventoryContext";
+import { Button, TextField, Grid } from '@mui/material';
 
 export default function TaskList() {
   const [tasks, setTasks] = useState([]);
@@ -46,6 +47,14 @@ export default function TaskList() {
         if (task.task_done === true) {
           tasks.title = <del>{task.title}</del>;
         }
+
+        // update time
+        if (task.task_done) {
+          task.completedAt = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        } else {
+          task.completedAt = null;
+        }
+
         return task;
       } else {
         return task;
